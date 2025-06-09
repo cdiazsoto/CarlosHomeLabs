@@ -71,10 +71,10 @@ ip address 192.168.30.1 255.255.255.0
 
 ## Tests Performed
 
-- Ping from PC-HR to PC-Sales: ✅
-- Ping from PC-HR to PC-IT: ✅
-- Confirmed VLAN isolation without router: ✅
-- Confirmed inter-VLAN routing via subinterfaces: ✅
+- Ping from PC-HR to PC-Sales: SUCCESSFUL
+- Ping from PC-HR to PC-IT: SUCCESSFUL
+- Confirmed VLAN isolation without router: SUCCESSFUL
+- Confirmed inter-VLAN routing via subinterfaces: SUCCESSFUL
 
 ## Topology Screenshot
 
