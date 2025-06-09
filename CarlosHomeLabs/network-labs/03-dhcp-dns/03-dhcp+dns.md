@@ -1,10 +1,10 @@
 # DHCP and DNS Configuration – Cisco Packet Tracer
 
-## 🧠 Objective
+## Objective
 
 Set up a DHCP server to automatically assign IP addresses to client devices and configure a DNS server to resolve domain names to IP addresses within a local network.
 
-## 🛠️ Devices Used
+## Devices Used
 
 - 1 Switch
 - 1 Router
@@ -12,7 +12,7 @@ Set up a DHCP server to automatically assign IP addresses to client devices and 
 - 3 PCs
 - Copper straight-through cables
 
-## 🖧 Network Configuration
+## Network Configuration
 
 - Network: 192.168.100.0/24
 - Default Gateway: 192.168.100.1 (Router)
@@ -20,7 +20,7 @@ Set up a DHCP server to automatically assign IP addresses to client devices and 
 - DNS Domain: `local.lab`
 - Sample hostname: `pc1.local.lab` → `192.168.100.10`
 
-## 🔧 Configuration Steps
+## Configuration Steps
 
 ### On the Router:
 ```bash
