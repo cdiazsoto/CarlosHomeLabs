@@ -12,7 +12,7 @@ Simulate a basic LAN with two switches and four end devices to practice network 
 - **Static IP addresses**
 - Devices are able to ping each other successfully.
 
-![Network Topology](01-topology.png)
+![Network Topology](01-topology.PNG)
 
 ## 🧩 Device Details
 
