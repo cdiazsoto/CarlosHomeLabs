@@ -1,17 +1,17 @@
 # VLAN Routing – Cisco Packet Tracer
 
-## 🧠 Objective
+## Objective
 
 Simulate a company network with three departments (HR, Sales, IT) using VLANs and configure inter-VLAN communication through a router using the Router-on-a-Stick method.
 
-## 🛠️ Devices Used
+## Devices Used
 
 - 1 Router
 - 1 Switch
 - 3 PCs
 - Copper straight-through cables
 
-## 🗂️ VLAN Configuration
+## VLAN Configuration
 
 | Department | VLAN Name | VLAN ID |
 |------------|-----------|---------|
@@ -19,7 +19,7 @@ Simulate a company network with three departments (HR, Sales, IT) using VLANs an
 | Sales      | SALES     | 20      |
 | IT         | IT        | 30      |
 
-## 🖧 IP Addressing Scheme
+## IP Addressing Scheme
 
 | PC      | IP Address     | VLAN | Gateway        |
 |---------|----------------|------|----------------|
@@ -27,7 +27,7 @@ Simulate a company network with three departments (HR, Sales, IT) using VLANs an
 | PC-Sales| 192.168.20.10  | 20   | 192.168.20.1   |
 | PC-IT   | 192.168.30.10  | 30   | 192.168.30.1   |
 
-## 🔧 Key Configurations
+## Key Configurations
 
 ### On the Switch:
 ```bash
@@ -69,18 +69,18 @@ encapsulation dot1Q 30
 ip address 192.168.30.1 255.255.255.0
 ```
 
-## 🧪 Tests Performed
+## Tests Performed
 
 - Ping from PC-HR to PC-Sales: ✅
 - Ping from PC-HR to PC-IT: ✅
 - Confirmed VLAN isolation without router: ✅
 - Confirmed inter-VLAN routing via subinterfaces: ✅
 
-## 📷 Topology Screenshot
+## Topology Screenshot
 
 ![Network Topology](02-Topology.PNG)
 
 ---
 
-📁 Packet Tracer File:`02-Vlan-routing.pkt` 
-🖼️ Screenshot:`02-Topology.PNG`
+ Packet Tracer File:`02-Vlan-routing.pkt` 
+ Screenshot:`02-Topology.PNG`
