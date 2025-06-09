@@ -48,10 +48,13 @@ no shutdown
 
 - PCs received IPs automatically from DHCP
 - DHCP lease status confirmed on server
-- ![dhcp](images/dhcp-success.PNG)
+
+  ![dhcp](images/dhcp-success.PNG)
+
 - Router is accessible via default gateway
 - DNS resolves local hostnames correctly
-- ![dns-ping](images/dns-ping-success.PNG)
+  
+  ![dns-ping](images/dns-ping-success.PNG)
 
 
 ## Topology Screenshot
