@@ -44,9 +44,9 @@ no shutdown
 - Set to obtain IP automatically via DHCP
 - Test `ping pc1.local.lab` and `ping pc2.local.lab`
 
-## ✅ Tests Performed
+## Tests Performed
 
-- PCs received IPs automatically from DHCP
+- PCs received IPs automatically from DHCP : (dhcp-success.png)
 - Router is accessible via default gateway
 - DNS resolves local hostnames correctly
 - DHCP lease status confirmed on server
