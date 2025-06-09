@@ -46,14 +46,14 @@ no shutdown
 
 ## Tests Performed
 
-- PCs received IPs automatically from DHCP : ![dhcp](dhcp-success.png)
+- PCs received IPs automatically from DHCP : ![dhcp](dhcp-success.PNG)
 - Router is accessible via default gateway
 - DNS resolves local hostnames correctly
 - DHCP lease status confirmed on server
 
 ## 📷 Topology Screenshot
 
-![Network Topology](topology.png)
+![Network Topology](topology.PNG)
 
 ---
 
