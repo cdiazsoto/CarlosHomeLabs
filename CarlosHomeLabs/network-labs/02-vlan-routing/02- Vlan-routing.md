@@ -6,8 +6,8 @@ Simulate a company network with three departments (HR, Sales, IT) using VLANs an
 
 ## 🛠️ Devices Used
 
-- 1 Router (e.g., 2911)
-- 1 Switch (e.g., 2960)
+- 1 Router
+- 1 Switch
 - 3 PCs
 - Copper straight-through cables
 
@@ -78,7 +78,7 @@ ip address 192.168.30.1 255.255.255.0
 
 ## 📷 Topology Screenshot
 
-![Network Topology](topology.png)
+![Network Topology](02-Topology.PNG)
 
 ---
 
