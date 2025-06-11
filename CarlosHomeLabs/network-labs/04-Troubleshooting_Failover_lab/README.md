@@ -82,7 +82,7 @@ PC1 is assigned VLAN 10 as part of an old vlan configuration, while the new sect
 - Result: No connectivity.
 - Fix: Configure VLAN 20 on SW1.
 
- ![before](images/diff-vlan-LAN.PNG) 
+ ![before](Images/diff-vlan-LAN.PNG) 
  
  ------------
  
