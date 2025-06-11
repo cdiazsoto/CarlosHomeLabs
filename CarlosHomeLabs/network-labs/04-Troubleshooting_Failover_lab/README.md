@@ -89,6 +89,7 @@ PC1 is assigned VLAN 10 as part of an old vlan configuration, while the new sect
  ![after](Images/move-to-correct-vlan.PNG)
 
 -Confirmation: PC1 has connectivity to PC2
+-
 ![success](Images/ping-success-vlans.PNG)
 
 ---
@@ -98,8 +99,8 @@ A user manually set `192.168.50.99` as gateway while setting the engineering dep
 - Result: PC3 can't reply to PC4 on the other subnet.
 - Fix: Set correct gateway: `192.168.50.1`
 
- ![beforepc3](images/wrong-gateway.PNG)
- ![beforefix](images/ping-diff-subnet.PNG) → ![afterpc3](images/correct-gateway-restored.PNG)
+ ![beforepc3](Images/wrong-gateway.PNG)
+ ![beforefix](Images/ping-diff-subnet.PNG) → ![afterpc3](Images/correct-gateway-restored.PNG)
 
 ---
 
@@ -115,7 +116,7 @@ interface fa0/2
 no shutdown
 ```
 
- ![beforee](images/port-admin-down.PNG) →  ![beforeeee](images/port-up-restored.PNG)
+ ![before](Images/port-admin-down.PNG) →  ![before](Images/port-up-restored.PNG)
 
 ---
 
@@ -135,14 +136,14 @@ ping 192.168.50.10
 - Inter-VLAN routing is working
 - Troubleshooting steps resolved the issues
 
-  ![before](images/successfull-ping-intervlan.PNG)
+  ![before](Images/successfull-ping-intervlan.PNG)
 ---
 
 ## Screenshots Summary
 
 | Screenshot                       | Purpose                                       |
 |----------------------------------|-----------------------------------------------|
-|  ![before](images/Topology-with-new-subnet.PNG) | Overall network layout with VLANs and IPs     |
+|  ![before](Images/Topology-with-new-subnet.PNG) | Overall network layout with VLANs and IPs     |
 | `vlan-config-sw1.png`            | VLAN and trunk setup                          |
 | `router-intervlan-config.png`    | Subinterface and routing config               |
 | `pc1-ip.png`, `pc2-ip.png`       | IP configs on PCs                             |
