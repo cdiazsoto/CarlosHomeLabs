@@ -153,15 +153,15 @@ ping 192.168.50.10
 
 | Screenshot                       | Purpose                                       |
 |----------------------------------|-----------------------------------------------|
-|  ![before](Images/Topology-with-new-subnet.PNG) | Overall network layout with VLANs and IPs     |
-| `vlan-config-sw1.png`            | VLAN and trunk setup                          |
-| `router-intervlan-config.png`    | Subinterface and routing config               |
-| ![afterpc3](Images/pc1-2-ip-config.PNG)       | IP configs on PCs                             |
-| ![afterpc3](Images/successfull-ping-intervlan.PNG)     | Successful inter-VLAN ping                    |
+|  ![beforedisruption](Images/Topology-with-new-subnet.PNG) | Overall network layout with VLANs and IPs     |
+| ![config](Images/sw1-config.PNG)          | VLAN and trunk setup                          |
+| ![config](Images/Router-config.PNG)    | Subinterface and routing config               |
+| ![config](Images/pc1-2-ip-config.PNG)       | IP configs on PCs                             |
+| ![after](Images/successfull-ping-intervlan.PNG)     | Successful inter-VLAN ping                    |
 |  ![beforepc3](Images/wrong-gateway.PNG)              | Wrong gateway config on PC2                   |
 | ![afterpc3](Images/correct-gateway-restored.PNG)   | Fixed gateway                                |
 | ![before](Images/port-admin-down.PNG)            | Disabled port scenario                        |
-| ![before](Images/port-up-restored.PNG)      | Port enabled and restored                     |
+| ![after](Images/port-up-restored.PNG)      | Port enabled and restored                     |
 
 ---
 
