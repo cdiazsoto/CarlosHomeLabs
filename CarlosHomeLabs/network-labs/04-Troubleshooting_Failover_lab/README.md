@@ -82,7 +82,7 @@ PC1 is assigned VLAN 10 as part of an old vlan configuration, while the new sect
 - Result: No connectivity.
 - Fix: Configure VLAN 20 on SW1.
 
- [before](/images/diff-vlan-LAN.PNG) → [after](/images/move-to-correct-vlan.PNG)
+ [before](images/diff-vlan-LAN.PNG) → [after](images/move-to-correct-vlan.PNG)
 
 -Confirmation: PC1 has connectivity to PC2
 [success](ping-success-vlans)
@@ -95,7 +95,7 @@ A user manually set `192.168.50.99` as gateway while setting the engineering dep
 - Fix: Set correct gateway: `192.168.50.1`
 
  [beforepc3](images/wrong-gateway.PNG)
- [before](images/ping-diff-subnet.PNG) → [afterpc3](images/correct-gateway-restored.PNG)
+ [beforefix](images/ping-diff-subnet.PNG) → [afterpc3](images/correct-gateway-restored.PNG)
 
 ---
 
@@ -111,7 +111,7 @@ interface fa0/2
 no shutdown
 ```
 
- [before](images/port-admin-down.PNG) →  [before](images/port-up-restored.PNG)
+ [beforee](images/port-admin-down.PNG) →  [beforeeee](images/port-up-restored.PNG)
 
 ---
 
