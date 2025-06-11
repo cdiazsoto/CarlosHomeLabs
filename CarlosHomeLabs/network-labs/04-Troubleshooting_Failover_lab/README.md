@@ -100,7 +100,14 @@ A user manually set `192.168.50.99` as gateway while setting the engineering dep
 - Fix: Set correct gateway: `192.168.50.1`
 
  ![beforepc3](Images/wrong-gateway.PNG)
- ![beforefix](Images/ping-diff-subnet.PNG) → ![afterpc3](Images/correct-gateway-restored.PNG)
+ 
+ -
+ 
+ ![beforefix](Images/ping-diff-subnet.PNG) 
+ 
+ -
+ 
+ → ![afterpc3](Images/correct-gateway-restored.PNG)
 
 ---
 
@@ -116,7 +123,10 @@ interface fa0/2
 no shutdown
 ```
 
- ![before](Images/port-admin-down.PNG) →  ![before](Images/port-up-restored.PNG)
+ ![before](Images/port-admin-down.PNG)
+ 
+ -
+ →  ![after](Images/port-up-restored.PNG)
 
 ---
 
@@ -146,15 +156,12 @@ ping 192.168.50.10
 |  ![before](Images/Topology-with-new-subnet.PNG) | Overall network layout with VLANs and IPs     |
 | `vlan-config-sw1.png`            | VLAN and trunk setup                          |
 | `router-intervlan-config.png`    | Subinterface and routing config               |
-| `pc1-ip.png`, `pc2-ip.png`       | IP configs on PCs                             |
-| `ping-fail-no-trunk.png`         | Failed ping due to missing trunk              |
-| `ping-success-intervlan.png`     | Successful inter-VLAN ping                    |
-| `wrong-gateway.png`              | Wrong gateway config on PC2                   |
-| `correct-gateway-restored.png`   | Fixed gateway                                |
-| `port-admin-down.png`            | Disabled port scenario                        |
-| `port-up-restored.png`           | Port enabled and restored                     |
-| `wrong-cable.png`                | Crossover cable issue                         |
-| `cable-fixed.png`                | Correct cable restored                        |
+| ![afterpc3](Images/pc1-2-ip-config.PNG)       | IP configs on PCs                             |
+| ![afterpc3](Images/successfull-ping-intervlan.PNG)     | Successful inter-VLAN ping                    |
+|  ![beforepc3](Images/wrong-gateway.PNG)              | Wrong gateway config on PC2                   |
+| ![afterpc3](Images/correct-gateway-restored.PNG)   | Fixed gateway                                |
+| ![before](Images/port-admin-down.PNG)            | Disabled port scenario                        |
+| ![before](Images/port-up-restored.PNG)      | Port enabled and restored                     |
 
 ---
 
