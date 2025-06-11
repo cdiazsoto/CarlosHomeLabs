@@ -33,7 +33,7 @@ At the same time, users report connectivity issues due to cable problems, miscon
 
 ## Configuration Overview
 
-### 🔹 On SW1:
+###  On SW1:
 ```bash
 vlan 20
 name SALES
@@ -46,13 +46,13 @@ interface fa0/1
 switchport mode trunk
 ```
 
-### 🔹 On SW2:
+###  On SW2:
 ```bash
 interface range fa0/1-3
 switchport mode access
 ```
 
-### 🔹 On Router R1:
+###  On Router R1:
 ```bash
 interface gig0/0.20
 encapsulation dot1Q 20
@@ -82,7 +82,11 @@ PC1 is assigned VLAN 10 as part of an old vlan configuration, while the new sect
 - Result: No connectivity.
 - Fix: Configure VLAN 20 on SW1.
 
- [before](images/diff-vlan-LAN.PNG) → [after](images/move-to-correct-vlan.PNG)
+ [before](images/diff-vlan-LAN.PNG) 
+ 
+ ------------
+ 
+ [after](images/move-to-correct-vlan.PNG)
 
 -Confirmation: PC1 has connectivity to PC2
 [success](ping-success-vlans)
