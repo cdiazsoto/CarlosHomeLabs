@@ -86,10 +86,10 @@ PC1 is assigned VLAN 10 as part of an old vlan configuration, while the new sect
  
  ------------
  
- ![after](images/move-to-correct-vlan.PNG)
+ ![after](Images/move-to-correct-vlan.PNG)
 
 -Confirmation: PC1 has connectivity to PC2
-![success](ping-success-vlans)
+![success](Images/ping-success-vlans.PNG)
 
 ---
 
