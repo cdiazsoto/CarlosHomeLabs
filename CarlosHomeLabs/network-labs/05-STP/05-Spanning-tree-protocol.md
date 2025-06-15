@@ -1,26 +1,25 @@
-# Day 8: STP and Redundant Path Lab (4-Switch Topology) – Cisco Packet Tracer
+# STP and Redundant Path Lab (4-Switch Topology) – Cisco Packet Tracer
 
-## 🧠 Objective
+##  Objective
 
 Simulate a high-availability Layer 2 network using four interconnected switches and Spanning Tree Protocol (STP). Demonstrate how STP elects a root bridge, blocks redundant paths to prevent switching loops, and automatically recovers connectivity in case of a link failure.
 
 ---
 
-## 🏢 Real-World Scenario
+##  Real-World Scenario
 
 A company implements a highly redundant switch network across four distribution switches to ensure continuous connectivity. STP ensures only one path is active at a time while keeping backup links in standby. This lab mirrors such enterprise scenarios where reliability is mission-critical.
 
 ---
 
-## 🛠️ Devices Used
+##  Devices Used
 
 - 4 Switches (SW1, SW2, SW3, SW4)
 - 2 PCs (PC1, PC2)
-- Straight-through cables
 
 ---
 
-## 🖧 Topology Diagram
+##  Topology Diagram
 
 ```
 PC1 --> SW1 <---> SW2
@@ -29,26 +28,26 @@ PC1 --> SW1 <---> SW2
        SW3 <---> SW4 <--- PC2
 ```
 
-🖼️ `images/topology-4sw-stp.png`
+ ![topology](images/topology.PNG)
 
 ---
 
-## 🔧 IP Addressing
+##  IP Addressing
 
 | PC   | IP Address     | Subnet Mask     |
 |------|----------------|-----------------|
 | PC1  | 192.168.70.10  | 255.255.255.0   |
 | PC2  | 192.168.70.11  | 255.255.255.0   |
 
-🖼️ `images/pc1-ip.png`, `images/pc2-ip.png`
+![ippc](images/pc-ip.PNG)
 
 ---
 
-## ⚙️ STP Configuration
+##  STP Configuration
 
 STP (PVST+) is enabled by default.
 
-### 🔍 Commands to Observe STP:
+###  Commands to Observe STP:
 
 ```bash
 enable
@@ -58,13 +57,11 @@ show spanning-tree
 - Identify the root bridge
 - Locate blocking ports
 
-🖼️ `images/stp-root-election.png`  
-🖼️ `images/stp-blocked-port-sw3.png`  
-🖼️ `images/stp-blocked-port-sw4.png`
+![root](images/stp-root-election-blocked-port.PNG)
 
 ---
 
-## 🏁 Optional: Force SW1 to Be Root Bridge
+## Force SW1 to Be Root Bridge
 
 ```bash
 configure terminal
@@ -72,42 +69,45 @@ spanning-tree vlan 1 priority 24576
 end
 ```
 
-🖼️ `images/forced-root-bridge.png`
+![forcedroot](images/forced-root-bridge.PNG)
 
 ---
 
-## 🧪 Testing Procedure
+##  Testing Procedure
 
-### ✅ Before Failure:
+###  Before Failure:
 ```bash
 ping 192.168.70.11
 ```
-🖼️ `images/ping-success-pc1-pc2.png`
+![pingroot](images/ping-pc1-pc2.PNG)
 
-### 🔄 Simulate Link Failure:
+###  Simulate Link Failure:
 - Disconnect SW1↔SW3 or SW2↔SW4
+
+![pingroot](images/active-link-discconect.PNG)
+  
 - STP recalculates and unblocks another path
 
-🖼️ `images/stp-recovery.png`
+![pingroot](images/stp-recovery.PNG)
 
 ---
 
-## 📷 Screenshot Summary
+## Screenshot Summary
 
 | File                          | Description                          |
 |-------------------------------|--------------------------------------|
-| topology-4sw-stp.png          | Visual layout of the topology        |
-| pc1-ip.png / pc2-ip.png       | PC IP configuration                 |
-| stp-root-election.png         | Root bridge output from SW1         |
-| stp-blocked-port-sw3.png      | Blocked port on SW3                 |
-| stp-blocked-port-sw4.png      | Blocked port on SW4                 |
-| forced-root-bridge.png        | Forcing SW1 as root bridge          |
-| ping-success-pc1-pc2.png      | Successful ping between PCs         |
-| stp-recovery.png              | STP recovering after link failure   |
+| ![topology](images/topology.PNG)          | Visual layout of the topology        |
+| ![ippc](images/pc-ip.PNG)       | PC IP configuration                 |
+| stp-root-election-blocked-port.PNG         | Root bridge output from SW1         |
+| stp-root-election-blocked-port.PNG      | Blocked port on SW3                 |
+| stp-root-election-blocked-port.PNG      | Blocked port on SW4                 |
+| ![forcedroot](images/forced-root-bridge.PNG)        | Forcing SW1 as root bridge          |
+| ![pingroot](images/ping-pc1-pc2.PNG)      | Successful ping between PCs         |
+| ![pingroot](images/stp-recovery.PNG)              | STP recovering after link failure   |
 
 ---
 
-## ✅ Key Takeaways
+## Key Takeaways
 
 - STP automatically blocks redundant links to prevent loops
 - A root bridge is elected based on priority + MAC
@@ -117,7 +117,7 @@ ping 192.168.70.11
 
 ---
 
-📁 Project File: `stp-4switch.pkt`  
+📁 Project File: `05-Spanning-tree-protocol.pkt`  
 📂 Images Folder: `/images/`
 
 This lab reinforces your understanding of STP behavior, link redundancy, and failure recovery — all of which are essential skills for any network admin.
