@@ -77,7 +77,7 @@ no shutdown
 
 | Image Name                       | Description                              |
 |----------------------------------|------------------------------------------|
-| ![topology](topology.PNG)       | Topology showing PC1, PC2, and SW1       |
+| ![topology](image/topology.PNG)       | Topology showing PC1, PC2, and SW1       |
 | ![portsecconfig](image/port-security-config.PNG)         | Switch CLI config for port security      |
 | ![unauthorized-violation](image/unauthorized-violation.PNG)  | Violation triggered when PC2 connects    |
 | ![port-recovery](image/port-recovery.PNG)                | Port recovery via shutdown/no shutdown   |
