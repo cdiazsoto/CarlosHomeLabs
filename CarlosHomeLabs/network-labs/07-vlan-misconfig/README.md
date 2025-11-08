@@ -28,6 +28,8 @@ In an office with multiple departments, some users report they can't communicate
 | PC2    | SW2 Fa0/1 | 10   | 192.168.10.11  |
 | SW1 ↔ SW2 | Fa0/2  | trunk| (Inter-switch) |
 
+![topology](images/topology.PNG)
+
 ---
 
 ##  Configuration Steps
@@ -51,6 +53,8 @@ interface fa0/2
 switchport mode trunk
 switchport trunk allowed vlan 10
 ```
+![vlan-config-access-ports](images/vlan-config-access-ports.PNG) 
+![trunk-config](images/trunk-config.PNG) 
 
 ---
 
@@ -59,8 +63,11 @@ switchport trunk allowed vlan 10
 1. Set PC2 to VLAN 1 (default) by mistake → test failed ping
 2. Set PC2 back to VLAN 10 → test success
 3. Remove VLAN 10 from trunk → test failed ping
+![truk-missing-vlan](images/truk-missing-vlan.PNG) 
 4. Add VLAN 10 back to trunk → test success
+![trunk-fixed-success](images/trunk-fixed-success.PNG)
 5. Add VLAN 20 to PC1 and test → ping fails
+![vlan-missmatch](images/vlan-missmatch.PNG) 
 
 ---
 
