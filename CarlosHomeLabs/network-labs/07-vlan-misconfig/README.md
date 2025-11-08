@@ -68,11 +68,11 @@ switchport trunk allowed vlan 10
 
 | Image Name               | Description                                      |
 |--------------------------|--------------------------------------------------|
-| topology.PNG        | Topology with PC1, PC2, and switches             |
-| vlan-misconfig-fail.png  | Ping fail when PC2 in wrong VLAN                |
-| vlan-corrected-success.png | Ping works after VLAN correction              |
-| trunk-missing-vlan.png   | Ping fail when VLAN 10 removed from trunk       |
-| trunk-fixed-success.png  | Ping success when trunk config is corrected     |
+| ![topology](image/topology.PNG)        | Topology with PC1, PC2, and switches             |
+| ![vlan-misconfig-fail](image/vlan-misconfig-fail.PNG)  | Ping fail when PC2 in wrong VLAN                |
+| ![vlan-rematch](vlan-rematch.PNG) | Ping works after VLAN correction              |
+| ![trunk-missing-vlan](image/trunk-missing-vlan.PNG)   | Ping fail when VLAN 10 removed from trunk       |
+| ![trunk-fixed-success](image/trunk-fixed-success.PNG) | Ping success when trunk config is corrected     |
 
 ---
 
