@@ -61,16 +61,23 @@ switchport trunk allowed vlan 10
 ##  Troubleshooting Tasks
 
 1. Set PC2 to VLAN 1 (default) by mistake → test failed ping
+
+![vlan-corrected-success](images/vlan-corrected-success.PNG) 
+
+
 2. Set PC2 back to VLAN 10 → test success
+
+![vlan-misconfig-fail](images/vlan-misconfig-fail.PNG) 
+   
 3. Remove VLAN 10 from trunk → test failed ping
    
 ![truk-missing-vlan](images/trunk-missing-vlan.PNG) 
 
-5. Add VLAN 10 back to trunk → test success
+4. Add VLAN 10 back to trunk → test success
    
 ![trunk-fixed-success](images/trunk-fixed-success.PNG)
 
-7. Add VLAN 20 to PC1 and test → ping fails
+5. Add VLAN 20 to PC1 and test → ping fails
    
 ![vlan-missmatch](images/vlan-missmatch.PNG) 
 
