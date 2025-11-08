@@ -1,6 +1,6 @@
 # Day 10: VLAN Misconfiguration and Inter-Switch Communication – Cisco Packet Tracer
 
-## 🧠 Objective
+##  Objective
 
 Identify and correct VLAN misconfigurations that prevent inter-device communication across switches. This lab replicates real-world issues like access ports in the wrong VLAN, missing trunk links, or VLANs not being allowed across trunks.
 
@@ -12,7 +12,7 @@ In an office with multiple departments, some users report they can't communicate
 
 ---
 
-## 🛠️ Devices Used
+##  Devices Used
 
 - 2 Switches (SW1, SW2)
 - 2 PCs (PC1, PC2)
@@ -30,7 +30,7 @@ In an office with multiple departments, some users report they can't communicate
 
 ---
 
-## 🔧 Configuration Steps
+##  Configuration Steps
 
 ### On SW1 and SW2:
 ```bash
@@ -54,7 +54,7 @@ switchport trunk allowed vlan 10
 
 ---
 
-## 🧪 Troubleshooting Tasks
+##  Troubleshooting Tasks
 
 1. Set PC2 to VLAN 1 (default) by mistake → test failed ping
 2. Set PC2 back to VLAN 10 → test success
@@ -64,11 +64,11 @@ switchport trunk allowed vlan 10
 
 ---
 
-## 📷 Screenshots to Capture
+##  Screenshots to Capture
 
 | Image Name               | Description                                      |
 |--------------------------|--------------------------------------------------|
-| topology-vlan.png        | Topology with PC1, PC2, and switches             |
+| topology.PNG        | Topology with PC1, PC2, and switches             |
 | vlan-misconfig-fail.png  | Ping fail when PC2 in wrong VLAN                |
 | vlan-corrected-success.png | Ping works after VLAN correction              |
 | trunk-missing-vlan.png   | Ping fail when VLAN 10 removed from trunk       |
@@ -76,7 +76,7 @@ switchport trunk allowed vlan 10
 
 ---
 
-## ✅ Key Takeaways
+##  Key Takeaways
 
 - VLANs must match across access ports to communicate
 - Trunks must allow the relevant VLANs
@@ -85,5 +85,5 @@ switchport trunk allowed vlan 10
 
 ---
 
-📁 Project File: `vlan-misconfig.pkt`  
-📂 Screenshots folder: `/images/`
+ Project File: `vlan-misconfig.pkt`  
+ Screenshots folder: `/images/`
