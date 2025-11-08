@@ -62,12 +62,12 @@ switchport trunk allowed vlan 10
 
 1. Set PC2 to VLAN 1 (default) by mistake → test failed ping
 
-![vlan-corrected-success](images/vlan-corrected-success.PNG) 
+![vlan-misconfig-fail](images/vlan-misconfig-fail.PNG) 
 
 
 2. Set PC2 back to VLAN 10 → test success
 
-![vlan-misconfig-fail](images/vlan-misconfig-fail.PNG) 
+![vlan-corrected-success](images/vlan-corrected-success.PNG) 
    
 3. Remove VLAN 10 from trunk → test failed ping
    
