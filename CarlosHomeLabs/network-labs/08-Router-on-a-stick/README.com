@@ -44,6 +44,8 @@ You’ll use **802.1Q encapsulation** to route between VLANs.
    VLAN10  VLAN20  VLAN30
 ```
 
+![topology](images/topology.PNG)
+
 ---
 
 ##  Configuration Steps
@@ -96,9 +98,9 @@ switchport trunk allowed vlan 10,20,30
 exit
 ```
 
-🧠 Fa0/24 connects to Router R1’s `g0/0` interface.
+ Fa0/24 connects to Router R1’s `g0/0` interface.
 
-🖼️ `images/trunk-config.png`
+ `images/trunk-config.png`
 
 ---
 
@@ -128,7 +130,7 @@ ip address 192.168.30.1 255.255.255.0
 exit
 ```
 
-🖼️ `images/router-subinterfaces.png`
+ `images/router-subinterfaces.png`
 
 ---
 
@@ -140,11 +142,11 @@ exit
 | PC2 | 20 | 192.168.20.10 | 255.255.255.0 | 192.168.20.1 |
 | PC3 | 30 | 192.168.30.10 | 255.255.255.0 | 192.168.30.1 |
 
-🖼️ `images/pc-ip-configs.png`
+ `images/pc-ip-configs.png`
 
 ---
 
-## 🧪 Testing Connectivity
+##  Testing Connectivity
 
 From **PC1 (VLAN 10)**:
 ```bash
@@ -152,48 +154,28 @@ ping 192.168.20.10
 ping 192.168.30.10
 ```
 
-✅ Expected result:
+ Expected result:
 ```
 Reply from 192.168.20.10: bytes=32 time<1ms TTL=128
 Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 ```
 
-🖼️ `images/ping-success.png`
+ `images/ping-success.png`
 
----
 
-## 🧰 Verification Commands
-
-**On Router R1:**
-```bash
-show ip interface brief
-show interfaces g0/0.10
-show running-config
-```
-
-**On Switch SW1:**
-```bash
-show vlan brief
-show interfaces trunk
-```
-
-🖼️ `images/show-commands.png`
-
----
-
-## ⚠️ Troubleshooting Scenarios
+##  Troubleshooting Scenarios
 
 | Problem | Symptom | Fix |
 |----------|----------|-----|
 | Wrong VLAN on PC port | Ping fails between VLANs | Assign correct VLAN |
-| Missing trunk config | No inter-VLAN communication | Configure trunk on Fa0/24 |
+| Missing trunk config | No inter-VLAN communication | Configure trunk on Fa0/4 |
 | Incorrect encapsulation ID | Ping fails between VLANs | Match VLAN IDs on subinterfaces |
 
-🖼️ `images/troubleshooting.png`
+ `images/troubleshooting.png`
 
 ---
 
-## ✅ Key Takeaways
+##  Key Takeaways
 
 - VLANs isolate departments at Layer 2  
 - Router-on-a-Stick enables Layer 3 communication between VLANs  
@@ -202,5 +184,5 @@ show interfaces trunk
 
 ---
 
-📁 Packet Tracer File: `intervlan-routing.pkt`  
-📂 Screenshot Folder: `images/`
+ Packet Tracer File: `intervlan-routing.pkt`  
+ Screenshot Folder: `images/`
