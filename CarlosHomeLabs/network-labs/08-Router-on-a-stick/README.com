@@ -1,13 +1,13 @@
-# Day 11–12: Inter-VLAN Routing (Router-on-a-Stick Configuration) – Cisco Packet Tracer
+# Inter-VLAN Routing (Router-on-a-Stick Configuration) – Cisco Packet Tracer
 
-## 🧠 Objective
+##  Objective
 
 Set up inter-VLAN routing using a single router interface (Router-on-a-Stick).  
 This lab demonstrates how to enable communication between multiple VLANs (IT, HR, and Finance) through subinterfaces.
 
 ---
 
-## 🏢 Real-World Scenario
+## Real-World Scenario
 
 A growing company separates departments into VLANs for security and traffic management:
 - **IT (VLAN 10)** – Administrative team  
@@ -19,7 +19,7 @@ You’ll use **802.1Q encapsulation** to route between VLANs.
 
 ---
 
-## 🛠️ Devices Used
+## Devices Used
 
 - 1 Router (R1)
 - 1 Switch (SW1)
@@ -44,7 +44,7 @@ You’ll use **802.1Q encapsulation** to route between VLANs.
    VLAN10  VLAN20  VLAN30
 ```
 
-🖼️ `images/topology-intervlan.png`
+ ![topology](images/topology.PNG) 
 
 ---
 
