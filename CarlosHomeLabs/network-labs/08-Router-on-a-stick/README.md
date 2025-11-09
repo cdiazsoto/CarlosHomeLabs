@@ -85,22 +85,21 @@ switchport access vlan 30
 exit
 ```
 
- `images/vlan-config.png`
+![switch](images/switch-config.PNG)
 
 ---
 
 ### Step 3 — Configure the Trunk Between Switch and Router
 
 ```bash
-interface fa0/24
+interface fa0/4
 switchport mode trunk
 switchport trunk allowed vlan 10,20,30
 exit
 ```
 
- Fa0/24 connects to Router R1’s `g0/0` interface.
+ Fa0/4 connects to Router R1’s `g0/0/0` interface.
 
- `images/trunk-config.png`
 
 ---
 
@@ -110,27 +109,27 @@ exit
 enable
 configure terminal
 
-interface g0/0
+interface g0/0/0
 no shutdown
 exit
 
-interface g0/0.10
+interface g0/0/0.10
 encapsulation dot1Q 10
 ip address 192.168.10.1 255.255.255.0
 exit
 
-interface g0/0.20
+interface g0/0/0.20
 encapsulation dot1Q 20
 ip address 192.168.20.1 255.255.255.0
 exit
 
-interface g0/0.30
+interface g0/0/0.30
 encapsulation dot1Q 30
 ip address 192.168.30.1 255.255.255.0
 exit
 ```
 
- `images/router-subinterfaces.png`
+![router](images/router-config.PNG)
 
 ---
 
@@ -142,7 +141,7 @@ exit
 | PC2 | 20 | 192.168.20.10 | 255.255.255.0 | 192.168.20.1 |
 | PC3 | 30 | 192.168.30.10 | 255.255.255.0 | 192.168.30.1 |
 
- `images/pc-ip-configs.png`
+![pc](images/pc-config.PNG)
 
 ---
 
@@ -160,7 +159,7 @@ Reply from 192.168.20.10: bytes=32 time<1ms TTL=128
 Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 ```
 
- `images/ping-success.png`
+![success](images/pc1-ping.PNG)
 
 
 ##  Troubleshooting Scenarios
@@ -171,7 +170,6 @@ Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 | Missing trunk config | No inter-VLAN communication | Configure trunk on Fa0/4 |
 | Incorrect encapsulation ID | Ping fails between VLANs | Match VLAN IDs on subinterfaces |
 
- `images/troubleshooting.png`
 
 ---
 
