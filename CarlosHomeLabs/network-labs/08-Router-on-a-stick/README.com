@@ -28,7 +28,7 @@ You’ll use **802.1Q encapsulation** to route between VLANs.
 
 ---
 
-## 🖧 Network Topology
+##  Network Topology
 
 ```
            [Router R1]
@@ -44,11 +44,9 @@ You’ll use **802.1Q encapsulation** to route between VLANs.
    VLAN10  VLAN20  VLAN30
 ```
 
- ![topology](images/Topology.PNG) 
-
 ---
 
-## 🔧 Configuration Steps
+##  Configuration Steps
 
 ### Step 1 — Create VLANs on SW1
 
@@ -85,7 +83,7 @@ switchport access vlan 30
 exit
 ```
 
-🖼️ `images/vlan-config.png`
+ `images/vlan-config.png`
 
 ---
 
