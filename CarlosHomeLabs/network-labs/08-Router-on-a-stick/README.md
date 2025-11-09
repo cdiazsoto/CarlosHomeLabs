@@ -85,7 +85,6 @@ switchport access vlan 30
 exit
 ```
 
-![switch](images/switch-config.PNG)
 
 ---
 
@@ -99,6 +98,11 @@ exit
 ```
 
  Fa0/4 connects to Router R1’s `g0/0/0` interface.
+
+
+
+![switch](images/switch-config.PNG)
+
 
 
 ---
