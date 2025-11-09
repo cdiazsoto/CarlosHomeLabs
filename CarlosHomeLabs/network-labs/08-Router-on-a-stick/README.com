@@ -44,7 +44,7 @@ You’ll use **802.1Q encapsulation** to route between VLANs.
    VLAN10  VLAN20  VLAN30
 ```
 
- ![topology](images/topology.PNG) 
+ ![topology](images/Topology.PNG) 
 
 ---
 
