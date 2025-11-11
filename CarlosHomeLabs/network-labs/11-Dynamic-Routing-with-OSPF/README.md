@@ -40,7 +40,7 @@ OSPF will automatically share routes between routers, calculate the shortest pat
 
 ---
 
-## ⚙️ IP Addressing Table
+##  IP Addressing Table
 
 | Device | Interface | IP Address | Subnet Mask | Description |
 |---------|------------|-------------|--------------|-------------|
@@ -54,13 +54,17 @@ OSPF will automatically share routes between routers, calculate the shortest pat
 
 ---
 
-## ⚙️ Step 1 — Configure Router Interfaces
+##  Step 1 — Configure Router Interfaces
 
 *(Ensure all interfaces are up and configured as shown in the table.)*
 
 ---
 
-## ⚙️ Step 2 — Enable OSPF on All Routers
+![routerconfig](images/routerconfig.PNG)
+
+---
+
+##  Step 2 — Enable OSPF on All Routers
 
 ### On R1:
 ```bash
@@ -70,10 +74,10 @@ router ospf 1
 network 192.168.10.0 0.0.0.255 area 0
 network 10.10.10.0 0.0.0.255 area 0
 exit
+```
 
-
-ON R2
-
+###ON R2:
+```bash
 enable
 configure terminal
 router ospf 1
@@ -81,18 +85,21 @@ network 192.168.20.0 0.0.0.255 area 0
 network 10.10.10.0 0.0.0.255 area 0
 network 10.20.20.0 0.0.0.255 area 0
 exit
-
-On R3:
-
+```
+###ON R3:
+```bash
 enable
 configure terminal
 router ospf 1
 network 192.168.30.0 0.0.0.255 area 0
 network 10.20.20.0 0.0.0.255 area 0
 exit
+```
+---
 
-🖼️ images/ospf-config.png
+![ospfconfig](images/ospf-config.PNG) 
 
+---
 ⚙️ Step 3 — Verify Neighbor Adjacency
 show ip ospf neighbor
 
