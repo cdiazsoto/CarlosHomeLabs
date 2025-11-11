@@ -1,12 +1,12 @@
-# Day 17–18: Dynamic Routing with OSPF (Open Shortest Path First) – Cisco Packet Tracer
+# Dynamic Routing with OSPF (Open Shortest Path First) – Cisco Packet Tracer
 
-## 🧠 Objective
+##  Objective
 
 Configure and verify **OSPF (Open Shortest Path First)** to dynamically exchange routing information between multiple routers.
 
 ---
 
-## 🏢 Real-World Scenario
+##  Real-World Scenario
 
 Your company is expanding its internal network backbone.  
 To improve scalability and performance, you've been asked to migrate from RIP to OSPF across all routers:
@@ -18,7 +18,7 @@ OSPF will automatically share routes between routers, calculate the shortest pat
 
 ---
 
-## 🛠️ Devices Used
+##  Devices Used
 
 - 3 Routers (R1 – HQ, R2 – Branch, R3 – Remote)
 - 3 PCs (one per LAN)
@@ -27,16 +27,16 @@ OSPF will automatically share routes between routers, calculate the shortest pat
 
 ---
 
-## 🖧 Network Topology
-
+##  Network Topology
+--
       [HQ LAN]        [Branch LAN]        [Remote LAN]
     192.168.10.0     192.168.20.0        192.168.30.0
         PC1              PC2                  PC3
          |                |                    |
         R1 -------------- R2 -------------- R3
       (10.10.10.0)     (10.20.20.0)
-
-🖼️ `images/topology-ospf.png`
+---
+![topology](images/topology)
 
 ---
 
@@ -117,39 +117,37 @@ From PC1 (192.168.10.10):
 ping 192.168.30.10
 
 
-✅ Expected output:
+ Expected output:
 
 Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 
 
-🖼️ images/ping-success-ospf.png
+ images/ping-success-ospf.png
 
-⚙️ Optional — Adjust OSPF Cost to Simulate Best Path
+ Optional — Adjust OSPF Cost to Simulate Best Path
 interface g0/1
 ip ospf cost 100
 
 
-💡 Lower cost = higher priority path. OSPF dynamically recalculates the best route.
+ Lower cost = higher priority path. OSPF dynamically recalculates the best route.
 
 🖼️ images/ospf-cost.png
 
-⚠️ Troubleshooting Scenarios
+ Troubleshooting Scenarios
 Problem	Symptom	Fix
 No adjacency	Neighbor Down	Ensure both routers are in the same area and subnet
 Routes missing	Incomplete routing table	Verify network statements
 Link flapping	Intermittent connectivity	Check cable and interface status
 
-🖼️ images/ospf-troubleshooting.png
+ images/ospf-troubleshooting.png
 
-✅ Key Takeaways
+ Key Takeaways
 
 OSPF is a link-state protocol, building a complete map of the network.
-
 Faster, more efficient, and scalable than RIP.
-
 Uses cost metric instead of hop count.
 
 All routers in area 0 must be fully connected for adjacency.
 
-📁 Packet Tracer File: ospf-dynamic-routing.pkt
-📂 Screenshot Folder: images/
+Packet Tracer File: Dynamic-Routing-OSPF.pkt
+Screenshot Folder: images/
