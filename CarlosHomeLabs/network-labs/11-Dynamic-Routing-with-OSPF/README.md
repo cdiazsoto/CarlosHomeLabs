@@ -146,10 +146,10 @@ ip ospf cost 100
 
 ---
  Troubleshooting Scenarios
-Problem      |Symptom	|Fix
-No adjacency	|Neighbor Down	|Ensure both routers are in the same area and subnet
-Routes missing	|Incomplete routing table	|Verify network statements
-Link flapping	|Intermittent connectivity	|Check cable and interface status
+|Problem          |Symptom	                  |Fix|
+|No adjacency	|Neighbor Down            	|Ensure both routers are in the same area and subnet|
+|Routes missing	|Incomplete routing table	|Verify network statements|
+|Link flapping	|Intermittent connectivity	|Check cable and interface status|
 
 
  ## Key Takeaways
