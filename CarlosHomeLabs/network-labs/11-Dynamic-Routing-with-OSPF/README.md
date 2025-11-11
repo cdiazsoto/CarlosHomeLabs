@@ -162,5 +162,5 @@ ip ospf cost 100
 
 All routers in area 0 must be fully connected for adjacency.
 
-Packet Tracer File: Dynamic-Routing-OSPF.pkt
-Screenshot Folder: images/
+- Packet Tracer File: Dynamic-Routing-OSPF.pkt
+- Screenshot Folder: images/
