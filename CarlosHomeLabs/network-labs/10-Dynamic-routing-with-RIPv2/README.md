@@ -1,19 +1,19 @@
-# Day 15–16: Dynamic Routing with RIP v2 – Cisco Packet Tracer
+# Dynamic Routing with RIP v2 – Cisco Packet Tracer
 
-## 🧠 Objective
+##  Objective
 
 Configure and verify **RIP version 2** to automatically exchange routing information between routers.
 
 ---
 
-## 🏢 Real-World Scenario
+##  Real-World Scenario
 
 Your network now includes three routers connecting multiple office sites. Manually configuring static routes on all routers has become inefficient.  
 You’ll deploy **RIPv2**, a distance-vector routing protocol, to automate route sharing and improve scalability.
 
 ---
 
-## 🛠️ Devices Used
+##  Devices Used
 
 - 3 Routers (R1 – HQ, R2 – Branch, R3 – Remote)
 - 3 PCs (one per LAN)
@@ -22,7 +22,7 @@ You’ll deploy **RIPv2**, a distance-vector routing protocol, to automate route
 
 ---
 
-## 🖧 Network Topology
+##  Network Topology
 
 ```
           [HQ LAN]      [Branch LAN]       [Remote LAN]
@@ -33,11 +33,11 @@ You’ll deploy **RIPv2**, a distance-vector routing protocol, to automate route
          (10.10.10.0)   (10.20.20.0)
 ```
 
-🖼️ `images/topology-ripv2.png`
+![topology](images/topology.PNG)
 
 ---
 
-## ⚙️ IP Addressing Table
+##  IP Addressing Table
 
 | Device | Interface | IP Address | Subnet Mask | Description |
 |---------|------------|-------------|--------------|-------------|
@@ -57,7 +57,7 @@ You’ll deploy **RIPv2**, a distance-vector routing protocol, to automate route
 
 ---
 
-## ⚙️ Step 1 — Configure Router Interfaces
+##  Step 1 — Configure Router Interfaces
 
 ### On R1:
 ```bash
@@ -105,11 +105,11 @@ no shutdown
 exit
 ```
 
-🖼️ `images/router-interface-configs.png`
+![routint](images/routint.PNG)
 
 ---
 
-## ⚙️ Step 2 — Enable RIPv2
+##  Step 2 — Enable RIPv2
 
 ### On All Routers:
 ```bash
@@ -124,29 +124,29 @@ network 10.20.20.0
 exit
 ```
 
-💡 Each router advertises its directly connected networks and learns others automatically.
+ Each router advertises its directly connected networks and learns others automatically.
 
-🖼️ `images/rip-config.png`
+![ripconfig](images/ripconfig.PNG)
 
 ---
 
-## 🧪 Step 3 — Test Connectivity
+##  Step 3 — Test Connectivity
 
 From **PC1 (192.168.10.10)**:
 ```bash
 ping 192.168.30.10
 ```
 
-✅ Expected result:
+ Expected result:
 ```
 Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 ```
 
-🖼️ `images/ping-success-rip.png`
+![succesfullping](images/successfullping.PNG)
 
 ---
 
-## 🧰 Step 4 — Verification Commands
+##  Step 4 — Verification Commands
 
 On each router:
 ```bash
@@ -155,13 +155,15 @@ show ip protocols
 show running-config
 ```
 
-✅ You should see learned routes marked with an “R”.
+ You should see learned routes marked with an “R”.
 
-🖼️ `images/show-ip-route-rip.png`
+![iproutetable](images/iproutetable.PNG) 
+![ipprotocol](images/ipprotocol.PNG)
+![runconfig](images/runconfig.PNG)
 
 ---
 
-## ⚠️ Troubleshooting Scenarios
+##  Troubleshooting Scenarios
 
 | Problem | Symptom | Fix |
 |----------|----------|-----|
@@ -169,11 +171,11 @@ show running-config
 | Wrong IP subnet | No communication | Verify IPs on interfaces |
 | Interface down | Routes not advertised | Use `no shutdown` |
 
-🖼️ `images/rip-troubleshooting.png`
+
 
 ---
 
-## ✅ Key Takeaways
+##  Key Takeaways
 
 - RIP v2 automates routing between routers  
 - Uses hop count as a metric (max 15 hops)  
@@ -182,5 +184,5 @@ show running-config
 
 ---
 
-📁 Packet Tracer File: `ripv2-dynamic-routing.pkt`  
-📂 Screenshot Folder: `images/`
+ Packet Tracer File: `dynamic-routing-ripv2.pkt`  
+ Screenshot Folder: `images/`
