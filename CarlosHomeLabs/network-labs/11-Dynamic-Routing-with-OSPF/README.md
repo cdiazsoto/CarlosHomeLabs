@@ -28,7 +28,7 @@ OSPF will automatically share routes between routers, calculate the shortest pat
 ---
 
 ##  Network Topology
---
+---
       [HQ LAN]        [Branch LAN]        [Remote LAN]
     192.168.10.0     192.168.20.0        192.168.30.0
         PC1              PC2                  PC3
@@ -36,7 +36,7 @@ OSPF will automatically share routes between routers, calculate the shortest pat
         R1 -------------- R2 -------------- R3
       (10.10.10.0)     (10.20.20.0)
 ---
-![topology](images/topology)
+![topology](images/topology.PNG)
 
 ---
 
