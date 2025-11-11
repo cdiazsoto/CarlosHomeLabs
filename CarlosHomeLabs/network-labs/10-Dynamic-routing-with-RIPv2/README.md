@@ -142,7 +142,7 @@ ping 192.168.30.10
 Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 ```
 
-![succesfullping](images/successfullping.PNG)
+![succesfullping](images/succesfullping.PNG)
 
 ---
 
