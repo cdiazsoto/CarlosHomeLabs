@@ -1,19 +1,19 @@
-# Day 13–14: Static Routing Between Routers – Cisco Packet Tracer
+# Static Routing Between Routers – Cisco Packet Tracer
 
-## 🧠 Objective
+##  Objective
 
 Configure and verify static routing between two routers to enable communication between different LAN networks.
 
 ---
 
-## 🏢 Real-World Scenario
+##  Real-World Scenario
 
 Your company has expanded to a second office building. Each building has its own LAN managed by a dedicated router.  
 Your task is to configure **static routes** between both routers so users from one site can communicate with users at the other.
 
 ---
 
-## 🛠️ Devices Used
+##  Devices Used
 
 - 2 Routers (R1 – Headquarters, R2 – Branch)
 - 2 PCs (PC1 – HQ, PC2 – Branch)
@@ -22,7 +22,7 @@ Your task is to configure **static routes** between both routers so users from o
 
 ---
 
-## 🖧 Network Topology
+##  Network Topology
 
 ```
          [HQ LAN]                   [Branch LAN]
@@ -33,11 +33,11 @@ Your task is to configure **static routes** between both routers so users from o
            10.10.10.0/30 (WAN link)
 ```
 
-🖼️ `images/topology-static-routing.png`
-
+ ![topology](images/topology.PNG)
+ 
 ---
 
-## ⚙️ IP Addressing Table
+##  IP Addressing Table
 
 | Device | Interface | IP Address | Subnet Mask | Description |
 |---------|------------|-------------|--------------|-------------|
@@ -50,7 +50,7 @@ Your task is to configure **static routes** between both routers so users from o
 
 ---
 
-## ⚙️ Step 1 — Configure IPs on Routers
+##  Step 1 — Configure IPs on Routers
 
 ### On R1:
 ```bash
@@ -82,11 +82,11 @@ no shutdown
 exit
 ```
 
-🖼️ `images/router-interface-configs.png`
-
+ ![ips-on-routers](images/ips-on-routers.PNG)
+ 
 ---
 
-## ⚙️ Step 2 — Configure Static Routes
+##  Step 2 — Configure Static Routes
 
 ### On R1:
 ```bash
@@ -98,29 +98,29 @@ ip route 192.168.20.0 255.255.255.0 10.10.10.2
 ip route 192.168.10.0 255.255.255.0 10.10.10.1
 ```
 
-🖼️ `images/static-route-config.png`
+ ![static-routes](images/static-routes.PNG)
 
 ---
 
-## ⚙️ Step 3 — Configure PCs
+##  Step 3 — Configure PCs
 
 | PC | IP Address | Subnet Mask | Default Gateway |
 |----|-------------|--------------|-----------------|
 | PC1 | 192.168.10.10 | 255.255.255.0 | 192.168.10.1 |
 | PC2 | 192.168.20.10 | 255.255.255.0 | 192.168.20.1 |
 
-🖼️ `images/pc-configs.png`
+ ![pc-config](images/pc-config.PNG)
 
 ---
 
-## 🧪 Step 4 — Test Connectivity
+##  Step 4 — Test Connectivity
 
 From **PC1 (HQ)**:
 ```bash
 ping 192.168.20.10
 ```
 
-✅ Expected output:
+ Expected output:
 ```
 Reply from 192.168.20.10: bytes=32 time<1ms TTL=128
 ```
@@ -130,11 +130,11 @@ If the ping fails, verify:
 - Static routes are correct (`show ip route`)
 - IPs and gateways match (`show running-config`)
 
-🖼️ `images/ping-success-static-routing.png`
+![success-ping](images/success-ping.PNG)
 
 ---
 
-## 🧰 Verification Commands
+##  Verification Commands
 
 On **R1** or **R2**:
 ```bash
@@ -143,11 +143,12 @@ show running-config
 show interfaces g0/0
 ```
 
-🖼️ `images/show-route-table.png`
+ ![ip-route](images/iproute.PNG)
+ ![shoconfig](images/shconfig.PNG)
 
 ---
 
-## ⚠️ Troubleshooting Scenarios
+##  Troubleshooting Scenarios
 
 | Problem | Symptom | Fix |
 |----------|----------|-----|
@@ -155,11 +156,11 @@ show interfaces g0/0
 | Wrong next-hop IP | Ping fails | Verify next-hop matches the neighbor router interface |
 | Interface shutdown | No connectivity | Use `no shutdown` on both WAN ports |
 
-🖼️ `images/troubleshooting.png`
+
 
 ---
 
-## ✅ Key Takeaways
+##  Key Takeaways
 
 - Static routes manually define paths between networks.  
 - Both routers must know each other's LAN networks.  
@@ -168,5 +169,5 @@ show interfaces g0/0
 
 ---
 
-📁 Packet Tracer File: `static-routing-lab.pkt`  
-📂 Screenshot Folder: `images/`
+ Packet Tracer File: `static-rout.pkt`  
+ Screenshot Folder: `images/`
