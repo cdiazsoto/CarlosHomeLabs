@@ -108,7 +108,7 @@ show ip ospf neighbor
 Each router should see its direct neighbor listed.
 ---
 
-![neighbor](images/opsf-neighbor.PNG) 
+![ospf-neighbor](images/ospf-neighbor.PNG) 
 
 ---
 ## Step 4 — Verify Learned Routes
