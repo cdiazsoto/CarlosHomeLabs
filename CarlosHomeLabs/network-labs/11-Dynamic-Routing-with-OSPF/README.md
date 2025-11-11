@@ -76,7 +76,7 @@ network 10.10.10.0 0.0.0.255 area 0
 exit
 ```
 
-###ON R2:
+### ON R2:
 ```bash
 enable
 configure terminal
@@ -86,7 +86,7 @@ network 10.10.10.0 0.0.0.255 area 0
 network 10.20.20.0 0.0.0.255 area 0
 exit
 ```
-###ON R3:
+### ON R3:
 ```bash
 enable
 configure terminal
@@ -100,59 +100,63 @@ exit
 ![ospfconfig](images/ospf-config.PNG) 
 
 ---
-⚙️ Step 3 — Verify Neighbor Adjacency
+## Step 3 — Verify Neighbor Adjacency
 show ip ospf neighbor
 
 
-✅ Expected output:
+ Expected output:
 Each router should see its direct neighbor listed.
+---
 
-🖼️ images/ospf-neighbors.png
+![neighbor](images/opsf-neighbor.PNG) 
 
-⚙️ Step 4 — Verify Learned Routes
+---
+## Step 4 — Verify Learned Routes
 show ip route ospf
 
 
-✅ You should see OSPF-learned routes marked with an O in the routing table.
+ You should see OSPF-learned routes marked with an O in the routing table.
 
-🖼️ images/show-ip-route-ospf.png
+![iproute](images/ip-route-ospf.PNG)
 
-🧪 Step 5 — Test Connectivity
+## Step 5 — Test Connectivity
 
 From PC1 (192.168.10.10):
 
-ping 192.168.30.10
+ping 192.168.30.10 and/or 192.168.20.10
 
 
  Expected output:
 
 Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 
+---
 
- images/ping-success-ospf.png
+![ping](images/pingsucces.PNG)
 
- Optional — Adjust OSPF Cost to Simulate Best Path
+---
+## Optional — Adjust OSPF Cost to Simulate Best Path
 interface g0/1
 ip ospf cost 100
 
-
  Lower cost = higher priority path. OSPF dynamically recalculates the best route.
+---
 
-🖼️ images/ospf-cost.png
+![cost](images/cost.PNG)
 
+---
  Troubleshooting Scenarios
 Problem	Symptom	Fix
 No adjacency	Neighbor Down	Ensure both routers are in the same area and subnet
 Routes missing	Incomplete routing table	Verify network statements
 Link flapping	Intermittent connectivity	Check cable and interface status
 
- images/ospf-troubleshooting.png
 
- Key Takeaways
+ ## Key Takeaways
 
-OSPF is a link-state protocol, building a complete map of the network.
-Faster, more efficient, and scalable than RIP.
-Uses cost metric instead of hop count.
+- OSPF is a link-state protocol, building a complete map of the network.
+- Faster, more efficient, and scalable than RIP.
+- Uses cost metric instead of hop count.
 
 All routers in area 0 must be fully connected for adjacency.
 
