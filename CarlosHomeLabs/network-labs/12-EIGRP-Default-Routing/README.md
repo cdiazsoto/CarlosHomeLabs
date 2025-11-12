@@ -33,7 +33,7 @@ Additionally, a **default route** will be configured on the branch router to sim
           (10.10.10.0)     (10.20.20.0)
 ```
 
- `images/topology-eigrp.png`
+ ![topology](images/topology.PNG)
 
 ---
 
@@ -75,7 +75,9 @@ exit
 
 Repeat for R2 and R3 following the IP table.
 
-🖼️ `images/router-interfaces-eigrp.png`
+![router-interfaces](images/router-interfaces.PNG)
+![rout-int-r2](images/rout-int-r2.PNG)
+![rout-int-r3](images/rout-int-r3.PNG)
 
 ---
 
@@ -109,7 +111,7 @@ no auto-summary
 exit
 ```
 
- `images/eigrp-config.png`
+ ![eigrp-config](images/eigrp-config.PNG)
 
 ---
 
@@ -119,8 +121,9 @@ exit
 show ip eigrp neighbors
 ```
 
- Expected: Each router should display its directly connected neighbor.  
- `images/eigrp-neighbors.png`
+ Expected: Each router should display its directly connected neighbor.
+
+ ![eigrp-neighbors](images/eigrp-neighbors.PNG)
 
 ---
 
@@ -131,7 +134,7 @@ show ip route eigrp
 ```
 
  Routes learned through EIGRP appear with a **D** in the routing table.  
- `images/eigrp-route-table.png`
+ ![eigrp-route-table](images/eigrp-route-table.PNG)
 
 ---
 
@@ -147,27 +150,30 @@ ping 192.168.30.10
 Reply from 192.168.30.10: bytes=32 time<1ms TTL=128
 ```
 
-🖼️ `images/ping-success-eigrp.png`
+![ping-success-eigrp](images/ping-success-eigrp.PNG)
 
 ---
 
-#  Day 20: Default Routing
+#  Default Routing
 
 ##  Objective
 
-Add a **default route** on the branch router (R2) that points to the HQ router (R1), simulating internet access.
+Add a **default route** on the HQ router (R1) that points to the ISP router (R4), simulating internet access.
+---
+
+R4 or ISP router was prevously set up for the purpouse of this excercise to simulate internet connection with static routes previously  used.
 
 ---
 
-##  Step 1 — Configure Default Route on R2
+##  Step 1 — Configure Default Route on R1
 
 ```bash
-ip route 0.0.0.0 0.0.0.0 10.10.10.1
+ip route 0.0.0.0 0.0.0.0 209.165.200.2
 ```
 
-This tells R2: “Send all unknown traffic to R1.”
+This tells R1: “Send all unknown traffic to ISP.”
 
- `images/default-route-config.png`
+ ![default-route-config](images/default-route-config.PNG)
 
 ---
 
@@ -184,13 +190,13 @@ exit
 
 This allows R1 to share its static (default) route with other routers dynamically.
 
- `images/eigrp-redistribute-static.png`
+ ![eigrp-redistribute-static](images/eigrp-redistribute-staticc.PNG)
 
 ---
 
 ##  Step 3 — Verify Default Route Propagation
 
-On R2 or R3:
+On R1 or R3:
 ```bash
 show ip route
 ```
@@ -200,7 +206,7 @@ show ip route
 D*EX 0.0.0.0/0 [170/30720] via 10.10.10.1
 ```
 
- `images/default-route-verification.png`
+ ![default-route-verification](images/default-route-verification.PNG)
 
 ---
 
@@ -211,9 +217,10 @@ From **PC3 (192.168.30.10)**, simulate internet ping:
 ping 8.8.8.8
 ```
 
- Expected: The ping is forwarded through the default route to R1.
+ Expected: Reply from 209.165.200.1: Destination host unreachable.
+The ping is forwarded through the default route to R1.
 
- `images/default-route-test.png`
+ ![defaultroutetest](images/default-route-test.PNG)
 
 ---
 
@@ -224,8 +231,6 @@ ping 8.8.8.8
 | Missing EIGRP neighbor | No route learning | Check `network` commands and interface IPs |
 | No default route learned | 0.0.0.0 missing | Verify `redistribute static` on R1 |
 | Interface down | Partial connectivity | `no shutdown` on all ports |
-
- `images/eigrp-troubleshooting.png`
 
 ---
 
@@ -240,3 +245,4 @@ ping 8.8.8.8
 
  Packet Tracer File: `eigrp-and-default-route.pkt`  
  Screenshot Folder: `images/`
+
