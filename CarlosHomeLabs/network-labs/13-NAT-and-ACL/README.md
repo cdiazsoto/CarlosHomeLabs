@@ -10,7 +10,7 @@ Configure a multi-branch network where:
 
 ## Topology Diagram
 
- ![topology](images/topology.PNG)
+ ![topology](Images/topology.PNG)
 
 ## IP Schema Summary
 
@@ -77,13 +77,14 @@ ip route 192.168.10.0 255.255.255.0 10.10.10.2
 ip route 192.168.20.0 255.255.255.0 10.20.20.2
 ```
 
-![NAT](images/nat-overlad.PNG)
+![NAT](Images/nat-overlad.PNG)
 
-![acl](images/r1aclconfig.PNG)
+![acl](Images/r1aclconfig.PNG)
 
-![r1](images/r1.config.PNG)
+![r1](Images/r1.config.PNG)
 
-![defaultroute](images/r1defaultroute.PNG)
+![defaultroute](Images/r1defaultroute.PNG)
+
 ---
 
 # R2 – Branch A Configuration
@@ -100,7 +101,7 @@ interface g0/1
 ip route 0.0.0.0 0.0.0.0 10.10.10.1
 ```
 
-![r2](images/r2config.PNG)
+![r2](Images/r2config.PNG)
 
 ---
 
@@ -118,7 +119,7 @@ interface g0/1
 ip route 0.0.0.0 0.0.0.0 10.20.20.1
 ```
 
-![r3](images/r3config.PNG)
+![r3](Images/r3config.PNG)
 
 ---
 
@@ -139,7 +140,7 @@ ip route 192.168.10.0 255.255.255.0 209.165.200.2
 ip route 192.168.20.0 255.255.255.0 209.165.200.2
 ```
 
-![isl](images/islconfig.PNG)
+![isl](Images/islconfig.PNG)
 
 ---
 
@@ -152,7 +153,7 @@ ping 192.168.20.10 → SUCCESS
 ```
 ---
 
-![pca](images/pingpca.PNG)
+![pca](Images/pingpca.PNG)
 
 ---
 
@@ -163,7 +164,7 @@ ping 8.8.8.8       → FAIL (blocked by ACL)
 ```
 ---
 
-![pcb](images/pingpcb.PNG)
+![pcb](Images/pingpcb.PNG)
 
 ---
 
@@ -175,8 +176,8 @@ show ip nat translations
 show ip nat statistics
 ```
 ---
-![natverification](natver.PNG)
-![natstatistics](natstatistics.PNG)
+![natverification](Images/natver.PNG)
+![natstatistics](Images/natstatistics.PNG)
 
 ---
 ### ACL Verification:
@@ -186,12 +187,11 @@ show ip interface g0/2
 ```
 ---
 
-![aclverification](aclver.PNG)
+![aclverification](Images/aclver.PNG)
 
 ---
  NAT translations for Branch A should appear; ACL denies for Branch B should increment.  
 ---
-
 
 ##  Troubleshooting Scenarios
 
@@ -218,6 +218,6 @@ This is the finalized and fully validated version of the Multi-Branch NAT + ACL 
 ---
 
 📁 Packet Tracer File: `natandacl.pkt`  
-📂 Screenshot Folder: `images/`
+📂 Screenshot Folder: `Images/`
 
 
