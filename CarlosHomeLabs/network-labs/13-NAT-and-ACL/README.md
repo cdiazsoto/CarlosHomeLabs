@@ -209,11 +209,8 @@ show ip interface g0/2
 - **ACLs** define who can or cannot reach external networks.  
 - Combining NAT + ACL is fundamental for secure enterprise routing.  
 - This configuration mirrors real-world corporate branch access control policies.
+- This is the finalized and fully validated version of the Multi-Branch NAT + ACL topology.
 
----
-
-# End of Lab
-This is the finalized and fully validated version of the Multi-Branch NAT + ACL topology.
 
 ---
 
