@@ -1,10 +1,10 @@
 # Day 23–24 — Multi-Area OSPF Lab (Final README)
 
-## 📘 Overview
+##  Overview
 This lab introduces OSPF multi-area routing in an enterprise-style, 3‑router environment.  
 You will configure Areas 0, 10, and 20, form neighbor adjacencies, verify LSDB, and test end‑to‑end routing.
 
-## 🏗️ Topology (Text Description)
+##  Topology (Text Description)
 
 ```
                    +-------------------+
@@ -45,7 +45,10 @@ You will configure Areas 0, 10, and 20, form neighbor adjacencies, verify LSDB, 
 
 ---
 
-# ⚙️ Configuration Steps
+![topology](images/topology.PNG)
+
+---
+#  Configuration Steps
 
 ## STEP 1 — Assign Router IDs
 ### R1:
@@ -90,8 +93,9 @@ router ospf 1
  network 192.168.20.0 0.0.0.255 area 20
 ```
 
-📸 Screenshots:
-- `show ip ospf interface` on all routers
+![ospfidintr1](images/OSPFIDINTR1.PNG)
+![ospfidintr2](images/OSPFIDINTR2.PNG)
+![ospfidintr3](images/OSPFIDINTR3.PNG)
 
 ---
 
@@ -104,7 +108,9 @@ Expected:
 - R2 sees R1  
 - R3 sees R1  
 
-📸 Screenshot: neighbor table
+![r1](images/r1neighbor.PNG)
+![r2](images/r2neighbor.PNG)
+![r3](images/r3neighbor.PNG)
 
 ---
 
@@ -117,7 +123,7 @@ Expected:
 - R2 learns LAN B  
 - R3 learns LAN A  
 
-📸 Screenshot: OSPF routes on each router
+![ospfroute](images/ospfroute.PNG)
 
 ---
 
@@ -133,8 +139,7 @@ ping 192.168.20.10
 ping 192.168.10.10
 ```
 
-📸 Screenshots:
-- Successful pings both ways
+![successping](images/successping.PNG)
 
 ---
 
@@ -145,7 +150,7 @@ router ospf 1
  area 20 range 192.168.20.0 255.255.255.0
 ```
 
-📸 Screenshot: `show ip ospf`
+![arearange](images/arearange.PNG)
 
 ---
 
@@ -183,5 +188,5 @@ show ip ospf interface brief
 
 ---
 
- Packet Tracer File: `natandacl.pkt`  
+ Packet Tracer File: `multi-area-ospf.pkt`  
  Screenshot Folder: `Images/`
