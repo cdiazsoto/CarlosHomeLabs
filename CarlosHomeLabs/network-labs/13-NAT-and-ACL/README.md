@@ -1,5 +1,5 @@
 # Day 21–22: Multi-Branch NAT + ACL Lab (Final Working Version)
-
+---
 ## Objective
 Configure a multi-branch network where:
 - Branch A has full Internet access.
@@ -10,7 +10,7 @@ Configure a multi-branch network where:
 
 ## Topology Diagram
 
-![topology](images/topology.PNG)
+ ![topology](images/topology.PNG)
 
 ## IP Schema Summary
 
