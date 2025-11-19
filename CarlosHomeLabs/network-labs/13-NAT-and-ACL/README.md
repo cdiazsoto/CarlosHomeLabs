@@ -81,7 +81,7 @@ ip route 192.168.20.0 255.255.255.0 10.20.20.2
 
 ![acl](Images/r1aclconfig.PNG)
 
-![r1](Images/r1.config.PNG)
+![r1](Images/r1config.PNG)
 
 ![defaultroute](Images/r1defaultroute.PNG)
 
