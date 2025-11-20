@@ -33,25 +33,25 @@ In this lab you will:
 
 ##  IP & Area Schema
 
-### 🔹 R1-HQ (Backbone + ABR)
+###  R1-HQ (Backbone + ABR)
 - Lo0: `1.1.1.1/32` — Area 0  
 - g0/0: `10.0.0.1/30` — MD5 Auth → R2  
 - g0/1: `10.0.0.5/30` — Simple Auth → R3  
 - g0/2: `10.0.0.9/30` — MD5 Auth → R4  
 
-### 🔹 R2 (Area 10)
+###  R2 (Area 10)
 - g0/0: `192.168.10.1/24`  
 - g0/1: `10.0.0.2/30` → R1  
 
 PC-A: `192.168.10.10/24`
 
-### 🔹 R3 (Area 20 — Stub)
+###  R3 (Area 20 — Stub)
 - g0/0: `192.168.20.1/24`  
 - g0/1: `10.0.0.6/30` → R1  
 
 PC-B: `192.168.20.10/24`
 
-### 🔹 R4 (Area 30 — Totally Stubby)
+###  R4 (Area 30 — Totally Stubby)
 - g0/0: `192.168.30.1/24`  
 - g0/1: `10.0.0.10/30` → R1  
 
@@ -59,7 +59,7 @@ PC-C: `192.168.30.10/24`
 
 ---
 
-# ⚙️ STEP 1 — Base IP + OSPF + Router IDs
+#  STEP 1 — Base IP + OSPF + Router IDs
 
 ## R1-HQ
 ```
