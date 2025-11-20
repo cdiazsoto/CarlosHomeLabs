@@ -170,7 +170,7 @@ interface g0/1
 ```
 ---
 
-![auth1-2](images/r1-r2auth.PNG)
+![auth1-2](images/r1-r2-auth.PNG)
 
 ---
 ---
@@ -191,7 +191,7 @@ interface g0/1
 ```
 ---
 
-![auth1-3](images/r1-r3auth.PNG)
+![auth1-3](images/r1-r3-auth.PNG)
 
 ---
 
@@ -211,7 +211,7 @@ interface g0/1
 ```
 ---
 
-![auth1-4](images/r1-r4auth.PNG)
+![auth1-4](images/r1-r4-auth.PNG)
 
 ---
 
