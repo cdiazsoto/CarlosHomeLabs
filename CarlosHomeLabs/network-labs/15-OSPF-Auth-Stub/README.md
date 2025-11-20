@@ -215,6 +215,9 @@ interface g0/1
 
 ---
 
+![md5simple](images/md5-simple.PNG)
+
+---
 #  STEP 3 — Stub & Totally Stubby Areas
 
 ##  Area 20 — Stub (R1 & R3)
@@ -272,9 +275,6 @@ show ip ospf interface g0/0
 show ip ospf interface g0/1
 show ip ospf interface g0/2
 ```
----
-![md5simple](images/md5-simple.PNG)
-
 ---
 ### Routing Table
 ```
