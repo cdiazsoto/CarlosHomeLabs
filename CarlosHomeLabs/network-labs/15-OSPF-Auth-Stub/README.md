@@ -211,7 +211,7 @@ interface g0/1
 ```
 ---
 
-![auth1-4](images/r1-r4-auth.PNG)
+![auth1-4](images/r1-r4-config.PNG)
 
 ---
 
