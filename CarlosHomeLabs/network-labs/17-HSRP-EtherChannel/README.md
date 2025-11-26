@@ -1,6 +1,6 @@
 # HSRP + Redundant Core for Esports VLANs (Option C)
 
-## 🎯Overview
+## Overview
 This lab simulates a **redundant Layer 3 core** for an esports / events network using:
 - Two redundant **HSRP core routers**
 - Two Layer 2 switches with **EtherChannel** between them
