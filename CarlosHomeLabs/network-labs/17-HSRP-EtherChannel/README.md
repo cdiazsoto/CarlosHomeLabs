@@ -1,6 +1,6 @@
 # HSRP + Redundant Core for Esports VLANs (Option C)
 
-## 🎯 Overview
+## 🎯Overview
 This lab simulates a **redundant Layer 3 core** for an esports / events network using:
 - Two redundant **HSRP core routers**
 - Two Layer 2 switches with **EtherChannel** between them
@@ -13,7 +13,7 @@ This is a high-availability design similar to what you’d expect in a real tour
 
 ---
 
-## 🏗️ Topology (Logical Overview)
+##  Topology (Logical Overview)
 
 Devices:
 - R1 – Core Router A (HSRP)
@@ -43,7 +43,7 @@ High-level layout:
 
 ---
 
-## 📦 VLAN & IP Plan (Esports-Oriented)
+##  VLAN & IP Plan (Esports-Oriented)
 
 ### VLAN IDs and Roles
 
@@ -71,7 +71,7 @@ PCs in each VLAN use the **HSRP VIP** as their default gateway.
 
 ---
 
-## 🔌 Physical Connections (Suggested)
+##  Physical Connections (Suggested)
 
 You can adapt interfaces according to Packet Tracer, but one clean mapping is:
 - R1 g0/0 → SW1 Fa0/1
@@ -91,7 +91,7 @@ SW2 access ports:
 
 ---
 
-# ⚙️ Step 1 — Configure VLANs on SW1 and SW2
+#  Step 1 — Configure VLANs on SW1 and SW2
 
 On **SW1** and **SW2**:
 ```bash
@@ -110,7 +110,7 @@ vlan 50
 ![vlanbrief](images/vlanbreif.PNG)
 ---
 
-# ⚙️ Step 2 — Configure the EtherChannel (SW1 ↔ SW2)
+#  Step 2 — Configure the EtherChannel (SW1 ↔ SW2)
 
 We will use **Port-Channel1** as a trunk between SW1 and SW2.
 
@@ -144,7 +144,7 @@ show interfaces trunk
 
 ---
 
-# ⚙️ Step 3 — Configure Trunks to Routers on SW1
+#  Step 3 — Configure Trunks to Routers on SW1
 
 On **SW1**:
 ```bash
@@ -164,7 +164,7 @@ These are **router-on-a-stick trunks** for R1 and R2.
 
 ---
 
-# ⚙️ Step 4 — Configure Access Ports on SW2
+#  Step 4 — Configure Access Ports on SW2
 
 On **SW2**:
 ```bash
@@ -193,7 +193,7 @@ Connect the correct PC to each port.
 
 ---
 
-# ⚙️ Step 5 — Configure Router Subinterfaces & HSRP
+#  Step 5 — Configure Router Subinterfaces & HSRP
 
 ## On R1 (Primary / Active)
 ```bash
@@ -274,7 +274,7 @@ interface g0/0.50
 
 ---
 
-# ⚙️ Step 6 — Configure PC IPs
+#  Step 6 — Configure PC IPs
 
 Each PC should be configured with:
 - IP in the correct subnet
@@ -290,7 +290,7 @@ Example:
 
 ---
 
-# 🧪 Step 7 — Verification & Failover Tests
+#  Step 7 — Verification & Failover Tests
 
 ## 1. Verify EtherChannel & Trunks
 ```bash
@@ -316,7 +316,7 @@ From each PC:
 
 ---
 
-# 🔁 Step 8 — HSRP Failover
+#  Step 8 — HSRP Failover
 
 1. Check HSRP state:
 ```bash
@@ -344,7 +344,7 @@ With **preempt** set, R1 will take back the Active role.
 
 ---
 
-# 🔑 Key Takeaways (Esports Context)
+#  Key Takeaways (Esports Context)
 
 - **HSRP** gives you a **virtual default gateway**, ensuring that if one core router fails, player PCs, broadcast stations, production, and management continue operating.
 - **EtherChannel** provides higher bandwidth and redundancy between switches while still looking like a single link to STP.
