@@ -107,7 +107,9 @@ vlan 50
  name MGMT
 ```
 ---
+
 ![vlanbrief](images/vlanbreif.PNG)
+
 ---
 
 #  Step 2 — Configure the EtherChannel (SW1 ↔ SW2)
