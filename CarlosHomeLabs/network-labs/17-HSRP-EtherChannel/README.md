@@ -108,7 +108,7 @@ vlan 50
 ```
 ---
 
-![vlanbrief](images/vlanbreif.PNG)
+![vlanbrief](images/vlanbrief.PNG)
 
 ---
 
