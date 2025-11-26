@@ -340,8 +340,11 @@ With **preempt** set, R1 will take back the Active role.
 ---
 
 ![r2failover](images/r2failover.PNG)
+
 ![hsrp](images/hsrpresume.PNG)
+
 ![failoverping](images/failoverping.PNG)
+
 ![ping](images/continousping.PNG)
 
 ---
